@@ -231,6 +231,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		391155A721E5FDBE00F9D309 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		5D001E5A2004019700AC5A4C /* symbols-array.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "symbols-array.json"; sourceTree = "<group>"; };
 		5D26507321933E320072FAEE /* Contentful.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Contentful.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D265075219343DB0072FAEE /* Contentful.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Contentful.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -410,6 +411,7 @@
 		A1A9FBD91CABE8EA00430734 = {
 			isa = PBXGroup;
 			children = (
+				391155A721E5FDBE00F9D309 /* Cartfile */,
 				ED86952A1EFA8C93004693BA /* Config.xcconfig */,
 				A1A9FBE51CABE8EA00430734 /* Sources */,
 				A1A9FBF11CABE8EA00430734 /* Tests */,

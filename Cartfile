@@ -1,2 +1,2 @@
-github "ikolpachkov/contentful.swift"
+github "ikolpachkov/contentful.swift" ~> 4.2.5
 

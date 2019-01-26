@@ -97,9 +97,27 @@ class DataCache: DataCacheProtocol {
 
         return target
     }
+    
+    func linkItem(for identifier: String) -> NSObject? {
+        var key = identifier
+        if let new = DataCache.allKeys.first(where: { $0.contains(key) }) {
+            key = new
+        }
+        
+        var target = self.asset(for: key) as? NSObject
+        
+        if target == nil {
+            target = self.entry(for: key) as? NSObject
+        }
+        
+        return target
+    }
 
+    static var allKeys: [String] = []
+    
     fileprivate static func cacheResource(in cache: NSCache<AnyObject, AnyObject>, resource: ContentSysPersistable) {
         let cacheKey = DataCache.cacheKey(for: resource)
+        allKeys.append(cacheKey)
         cache.setObject(resource as AnyObject, forKey: cacheKey as AnyObject)
     }
 }

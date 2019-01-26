@@ -225,6 +225,17 @@ public class SynchronizationManager: PersistenceIntegration {
                 }
             }
         }
+        
+        if let client = self.client {
+            client.linkResolver.churnLinks(resolve: { identifier in
+                var key = identifier
+                if let id = identifier.components(separatedBy: "_").first {
+                    key = id
+                }
+                return cache.linkItem(for: key)
+            })
+        }
+        
         cacheUnresolvedRelationships()
     }
 

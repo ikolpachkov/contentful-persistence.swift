@@ -424,7 +424,6 @@ public class SynchronizationManager: PersistenceIntegration {
         guard let relationships = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: [FieldName: Any]] else {
             return nil
         }
-
         return relationships
     }
 
